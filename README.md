@@ -25,3 +25,6 @@ An application demonstrating how to administer naloxone, safe drug use, access t
 - Playwright
 
 ## Command Line(s)
+
+npx create-next-app
+npm run dev
