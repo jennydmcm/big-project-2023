@@ -26,5 +26,5 @@ An application demonstrating how to administer naloxone, safe drug use, access t
 
 ## Command Line(s)
 
-npx create-next-app
-npm run dev
+- npx create-next-app
+- npm run dev
