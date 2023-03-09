@@ -8,10 +8,7 @@
 
 ## Application Description
 
-```
 An application demonstrating how to administer naloxone, safe drug use, access to drug testing and safe supply around you.
-
-```
 
 ## Tools/Technology Used
 
