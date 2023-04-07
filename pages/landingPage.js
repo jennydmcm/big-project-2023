@@ -1,7 +1,7 @@
-import styles from "./styles/Landing.module.css"
+import styles from "@/styles/Landing.module.css"
 
-export default function landingPage(){
-    return(
+export default function landingPage() {
+    return (
         <></>
     )
 }

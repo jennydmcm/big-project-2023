@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 import Head from 'next/head';
 import Hamburger from '@/components/Hamburger'
-import Logomark from '@/components/Logo';
+import Logomark from '@/components/logo';
 import Homeheroimg from '@/components/Home-hero-img';
 
 export default function homePage() {
