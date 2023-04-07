@@ -4,3 +4,8 @@
   --vista-blue: #819DFF;
   --savoy-blue: #5762B8;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}

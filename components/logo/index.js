@@ -1,9 +1,14 @@
 import { useState } from "react"
-import styles from "/logo.module.css"
+import Image from "next/image"
+import Logo from '@/public/icons/logo.svg'
 
 
-export default function Logo() {
+export default function Logomark() {
     return (
-        <></>
+
+        <Image src={Logo}
+            width={173}
+            height={70} />
+
     )
-}
+};

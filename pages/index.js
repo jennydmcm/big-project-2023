@@ -1,14 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
-import { useState } from 'react';
+import Head from 'next/head';
 import Hamburger from '@/components/Hamburger'
+import Logomark from '@/components/Logo';
+import Homeheroimg from '@/components/Home-hero-img';
 
-const HomePage = () => {
-
+export default function homePage() {
   return (
-    <Hamburger />
-  );
-};
+    <>
+      <Head>
+        <title>Create Next App</title>
 
-export default HomePage;
+
+      </Head>
+      <main className={styles.main}>
+        <div className={styles.navbar}>
+          <Logomark className={styles.logomark} />
+
+          <Hamburger className={styles.hamburger} />
+        </div>
+        <Homeheroimg />
+
+
+      </main>
+    </>
+  )
+}
+
+
+

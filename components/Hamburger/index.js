@@ -25,13 +25,26 @@ export default function Menu() {
                             <div className={styles.menu_text}>
                                 <ul className={styles.list}>
                                     <a href="http://localhost:3000/">
-                                        <li className={styles.text_link} >Home</li>
-                                    </a>
-                                    <a href="http://localhost:3000/about">
-                                        <li className={styles.text_link} >About</li>
+                                        <li className={styles.text_link} >home</li>
                                     </a>
                                     <a href="http://localhost:3000/contact">
-                                        <li className={styles.text_link} >Contact</li>
+                                        <li className={styles.text_link} >lesson1</li>
+                                    </a>
+                                    <a href="http://localhost:3000/contact">
+                                        <li className={styles.text_link} >lesson 2</li>
+                                    </a>
+                                    <a href="http://localhost:3000/contact">
+                                        <li className={styles.text_link} >lesson 3</li>
+                                    </a>
+                                    <a href="http://localhost:3000/contact">
+                                        <li className={styles.text_link} >lesson 4</li>
+                                    </a>
+                                    <a href="http://localhost:3000/contact">
+                                        <li className={styles.text_link} >know your rights</li>
+
+                                    </a>
+                                    <a href="http://localhost:3000/contact">
+                                        <li className={styles.text_link} >resources</li>
                                     </a>
                                 </ul>
                             </div>
