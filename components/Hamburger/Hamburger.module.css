@@ -1,44 +1,42 @@
-@media only screen and (min-device-width: 414px) and (max-device-width: 828px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
-    .menu {
-        width: 43px;
-        height: 34px;
-        padding-left: 180px;
-    }
+.menu {
+    width: 43px;
+    height: 34px;
+    padding-left: 180px;
+}
 
-    .menubackground {
-        width: 290px;
-        height: 290px;
-    }
+.menubackground {
+    width: 290px;
+    height: 290px;
+}
 
-    .wrap {
-        z-index: 1;
-    }
+.wrap {
+    z-index: 1;
+}
 
-    .text_wrap {
-        display: flex;
-        flex-direction: row;
-        gap: 92px;
-        margin-top: -240px;
-        margin-left: -50px;
-    }
+.text_wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 92px;
+    margin-top: -240px;
+    margin-left: -50px;
+}
 
 
-    .list {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        gap: 25px;
-    }
+.list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 25px;
+}
 
-    .text_link {
-        font-size: 20px;
-        color: #FCECE2;
-        text-decoration: none;
-    }
+.text_link {
+    font-size: 20px;
+    color: #FCECE2;
+    text-decoration: none;
+}
 
-    .menu {
-        width: "70px";
-        height: "55px";
-        cursor: "pointer";
-    }
+.menu {
+    width: "70px";
+    height: "55px";
+    cursor: "pointer";
 }
