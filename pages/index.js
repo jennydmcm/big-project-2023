@@ -10,9 +10,8 @@ export default function homePage() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-
-
+        <title>naloxONE</title>
+        <link rel="icon" href="/public/icons/favicon.svg" />
       </Head>
       <main className={styles.main}>
         <div className={styles.navbar}>
