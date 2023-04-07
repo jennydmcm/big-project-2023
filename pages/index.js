@@ -11,7 +11,7 @@ export default function homePage() {
     <>
       <Head>
         <title>naloxONE</title>
-        <link rel="icon" href="/public/icons/favicon.svg" />
+        <link rel="icon" href="/icons/favicon.svg" />
       </Head>
       <main className={styles.main}>
         <div className={styles.navbar}>
