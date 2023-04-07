@@ -40,3 +40,8 @@
     height: "55px";
     cursor: "pointer";
 }
+
+.exit_text {
+    display: flex;
+
+}
