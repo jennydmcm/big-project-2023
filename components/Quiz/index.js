@@ -19,8 +19,8 @@ export default function Quiz() {
         const { title, question, options } = quizData[currentQuestion];
         return (
             <div className={styles.card}>
-                <h1>{title}</h1>
-                <p>{question}</p>
+                <h1 className={styles.title} >{title}</h1>
+                <p className={styles.question} >{question}</p>
                 {options.map((option, index) => (
                     <div key={index} className={styles.answer}>
                         <button onClick={() => handleAnswerClick(index)}>{option}</button>
