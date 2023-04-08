@@ -1,0 +1,69 @@
+
+.main{
+    background-color: var(--savoy-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 414px;
+    height: 896px;
+    font-family: Figtree, sans-serif;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22rem;
+    height: 25rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 1rem;
+}
+
+.card > h1{
+    font-family: Days One;
+}
+
+.card > p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5rem;
+}
+
+.answerOne > button {
+    color: var(--white);
+    font-family: Figtree, sans-serif;
+    background-color: transparent;
+    width: 22rem;
+    height: 4rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+}
+
+
+.answerTwo > button {
+    color: var(--white);
+    font-family: Figtree, sans-serif;
+    background-color: transparent;
+    width: 22rem;
+    height: 4rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+}
