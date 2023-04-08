@@ -31,13 +31,19 @@ export default function homePage() {
           <h1 className={styles.header} >your lessons</h1>
         </div>
         <div className={styles.lessons}>
-          <Lesson1 />
-          <Lesson2 />
-          <Lesson3 />
-          <Lesson4 />
+          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+            <Lesson1 />
+          </Link >
+          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+            <Lesson2 />
+          </Link >
+          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+            <Lesson3 />
+          </Link >
+          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+            <Lesson4 />
+          </Link >
         </div>
-
-
       </main>
     </>
   )
