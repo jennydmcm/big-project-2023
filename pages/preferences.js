@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import styles from '@/styles/QOne.module.css';
-import Quiz from '@/components/quizScreen/Index';
+import Quiz from '@/components/Quiz/index';
 import quizData from '@/data/questions.json';
 
 export default function landingPage() {
