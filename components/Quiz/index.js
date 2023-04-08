@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import styles from '@/components/quizScreen/Quiz.module.css';
+import styles from './Quiz.module.css';
 import quizData from '@/data/questions.json';
 
 export default function Quiz() {
