@@ -8,7 +8,8 @@ export default function Logomark() {
 
         <Image src={Logo}
             width={173}
-            height={70} />
+            height={60}
+        />
 
     )
 };

@@ -5,6 +5,10 @@ import Head from 'next/head';
 import Hamburger from '@/components/Hamburger'
 import Logomark from '@/components/logo';
 import Homeheroimg from '@/components/Home-hero-img';
+import Lesson1 from '@/components/Lesson1';
+import Lesson2 from '@/components/Lesson2';
+import Lesson3 from '@/components/Lesson3';
+import Lesson4 from '@/components/Lesson4';
 
 export default function homePage() {
   return (
@@ -27,7 +31,10 @@ export default function homePage() {
           <h1 className={styles.header} >your lessons</h1>
         </div>
         <div className={styles.lessons}>
-
+          <Lesson1 />
+          <Lesson2 />
+          <Lesson3 />
+          <Lesson4 />
         </div>
 
 
