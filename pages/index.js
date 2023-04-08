@@ -3,8 +3,8 @@ import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 import Head from 'next/head';
 import Hamburger from '@/components/Hamburger'
-import Logomark from '@/components/logo';
-import Homeheroimg from '@/components/Home-hero-img';
+import Logomark from '@/components/Logo';
+import Homeheroimg from '@/components/Homeimg';
 import Lesson1 from '@/components/Lesson1';
 import Lesson2 from '@/components/Lesson2';
 import Lesson3 from '@/components/Lesson3';
@@ -31,7 +31,10 @@ export default function homePage() {
           <h1 className={styles.header} >your lessons</h1>
         </div>
         <div className={styles.lessons}>
-          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+          <Link style={{
+            textDecoration: 'none'
+
+          }} href="/lessonOne">
             <Lesson1 />
           </Link >
           <Link style={{ textDecoration: 'none' }} href="/lessonTwo">
@@ -44,7 +47,7 @@ export default function homePage() {
             <Lesson4 />
           </Link >
         </div>
-      </main>
+      </main >
     </>
   )
 }
