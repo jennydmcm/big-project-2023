@@ -34,13 +34,13 @@ export default function homePage() {
           <Link style={{ textDecoration: 'none' }} href="/lessonOne">
             <Lesson1 />
           </Link >
-          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+          <Link style={{ textDecoration: 'none' }} href="/lessonTwo">
             <Lesson2 />
           </Link >
-          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+          <Link style={{ textDecoration: 'none' }} href="/lessonThree">
             <Lesson3 />
           </Link >
-          <Link style={{ textDecoration: 'none' }} href="/lessonOne">
+          <Link style={{ textDecoration: 'none' }} href="/lessonFour">
             <Lesson4 />
           </Link >
         </div>
