@@ -17,9 +17,9 @@
       },
       {
         "title": "substance type",
-        "question": "what substance(s) are being used",
+        "question": "what substance(s) are being used?",
         "options": [
-          "prescription",
+          "prescripted",
           "non-medical"
         ]
       },
