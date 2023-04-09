@@ -22,26 +22,26 @@ export default function Menu() {
                                         x</h1>
                                 </div>
                                 <ul className={styles.list}>
-                                    <a href="http://localhost:3000/"
+                                    <a href="/"
                                         className={styles.text_link} >home
                                     </a>
-                                    <a href="http://localhost:3000/contact"
+                                    <a href="/lessonone"
                                         className={styles.text_link} >lesson 1
                                     </a>
-                                    <a href="http://localhost:3000/contact"
+                                    <a href="/lessontwo"
                                         className={styles.text_link} >lesson 2
                                     </a>
-                                    <a href="http://localhost:3000/contact"
+                                    <a href="/lessonthree"
                                         className={styles.text_link} >lesson 3
                                     </a>
-                                    <a href="http://localhost:3000/contact"
+                                    <a href="/lessonfour"
                                         className={styles.text_link} >lesson 4
                                     </a>
-                                    <a href="http://localhost:3000/contact"
+                                    <a href="/knowyourrights"
                                         className={styles.text_link}> know your rights
 
                                     </a>
-                                    <a href="http://localhost:3000/contact"
+                                    <a href="/resources"
                                         className={styles.text_link}> resources
                                     </a>
                                 </ul>

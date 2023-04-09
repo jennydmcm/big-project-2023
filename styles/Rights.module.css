@@ -1,0 +1,97 @@
+.main {
+    background-color: var(--white);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 414px;
+    font-family: Figtree;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 414px;
+    height: 107px;
+    background-color: var(--white);
+}
+
+
+
+.title {
+    font-size: 28px;
+    font-family: Days One;
+    font-weight: 400;
+    text-align: center;
+    color: var(--savoy-blue);
+}
+
+
+.subtitle {
+    font-size: 20px;
+    font-family: Days One;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--savoy-blue);
+}
+
+.quote {
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--coral-pink);
+    width: 300px;
+    text-align: center;
+}
+
+.source {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--savoy-blue);
+    width: 300px;
+    text-align: center;
+
+}
+
+.info1 {
+
+    color: var(--savoy-blue);
+    width: 300px;
+    text-align: center;
+}
+
+.listTitle {
+    font-size: 17px;
+    font-family: Days One;
+
+}
+
+
+
+.info2 {
+    color: var(--savoy-blue);
+    width: 300px;
+    text-align: center;
+}
+
+.witness {
+    font-size: 17px;
+    font-family: Days One;
+}
+
+.psa {
+
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 300px;
+    padding: 15px;
+    background-color: var(--savoy-blue);
+    border-radius: 15px;
+    color: var(--white);
+
+
+}
