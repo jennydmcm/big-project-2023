@@ -25,3 +25,4 @@ An application demonstrating how to administer naloxone, safe drug use, access t
 
 - npx create-next-app
 - npm run dev
+- npm i react-chartjs-2

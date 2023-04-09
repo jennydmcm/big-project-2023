@@ -9,7 +9,7 @@ export default function knowYourRights() {
     return (
         <>
             <Head>
-                <title></title>
+                <title>naloxONE</title>
                 <link rel="icon" href="/icons/favicon.svg" />
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');

@@ -1,0 +1,95 @@
+.main {
+    background-color: var(--white);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 414px;
+    background-color: var(--white);
+    font-family: Figtree;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 414px;
+    height: 107px;
+    background-color: var(--white);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.title {
+    font-family: Days One;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    color: var(--savoy-blue);
+    padding-top: 30px;
+}
+
+.img {
+    padding-left: 20px;
+}
+
+.info {
+    width: 310px;
+    color: var(--savoy-blue);
+
+}
+
+.sites {
+    width: 300px;
+    text-align: center;
+    color: var(--savoy-blue);
+    padding: 20px;
+    border: 2px solid var(--savoy-blue);
+    border-radius: 15px;
+    margin-bottom: 40px;
+
+}
+
+
+.linkTitle {
+    width: 300px;
+    font-size: 16px;
+
+    font-family: Days One;
+
+}
+
+.about {
+    width: 300px;
+    font-size: 16px;
+
+}
+
+.link {
+    width: 300px;
+    font-size: 16px;
+    color: var(--coral-pink);
+    text-decoration: underline;
+}
+
+.chartTitle {
+    color: var(--coral-pink);
+    font-size: 25px;
+    width: 310px;
+    text-align: center;
+}
+
+.titleData {
+    font-family: Days One;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--savoy-blue);
+    margin-bottom: 0;
+    margin-top: 40px;
+}
