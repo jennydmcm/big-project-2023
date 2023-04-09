@@ -1,5 +1,5 @@
 .main{
-  background-color: var(--savoy-blue);
+  background-image: linear-gradient(to bottom, var(--white), var(--savoy-blue)70%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,11 +10,12 @@
   font-family: Figtree, sans-serif;
 }
 
+
 .progressContainer{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  color: var(--white);
+  gap: 1.5rem;
+  color: var(--savoy-blue);
   padding-bottom: 4rem;
 }
 
@@ -28,7 +29,7 @@
 .progress {
     height: 10px;
     border-radius: 1rem;
-    background-color: var(--vista-blue);
+    background-color: var(--coral-pink);
     margin-bottom: 10px;
     transition: width 0.4s ease-in-out;
 
@@ -41,19 +42,48 @@
     background-color: var(--white);
     transition: width 0.3s ease;
   }
+  
+  .progressLetter {
+    display: inline-block;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-0.2em); }
+  }
 
-
-.card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 22rem;
-  height: 25rem;
-  color: var(--white);
-  border: 2px solid var(--white);
-  border-radius: 1rem;
-}
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22rem;
+    height: 25rem;
+    color: var(--coral-pink);
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 1rem;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
 
 .card > h1{
   font-family: Days One;
@@ -74,7 +104,8 @@
   align-items: center;
   justify-content: center;
   font-family: Figtree, sans-serif;
-  padding-top: 1rem;
+  font-weight: 500;
+  padding-top: 2rem;
 }
 
 .answer > button {
@@ -85,7 +116,7 @@
   color: var(--white);
   background-color: transparent;
   flex-wrap: wrap;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 22rem;
   height: 3rem;
   border: 2px solid var(--white);
@@ -94,9 +125,32 @@
 
 .answer > button:hover{
   transition: 200ms ease-in-out;
+  transform: scale(1.03);
   background-color: var(--white);
   color: var(--savoy-blue);
+  cursor: pointer;
 }
 
-
+.buttons{
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  gap: 12rem;
+}
   
+.buttons > button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-family: Figtree, sans-serif;
+  font-size: 1.1rem;
+}
+
+.buttons > button:hover {
+  cursor: pointer;
+  font-family: Figtree, sans-serif;
+  font-weight: 900;
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+}

@@ -20,12 +20,28 @@ export default function Quiz() {
         const currentProgress = currentQuestion + 1;
         const progressPercentage = (currentProgress / totalQuestions) * 100;
 
+        const letters = progressPercentage.toString().split("");
+
         return (
             <div className={styles.questionContainer}>
                 <div className={styles.progressContainer}>
-                    <div className={styles.progressPercentage}>{`${progressPercentage}%`} completed</div>
+                    <div className={styles.progressPercentage}>
+                        {letters.map((letter, index) => (
+                            <span
+                                key={index}
+                                className={`${styles.progressLetter} bounce`}
+                                style={{ animationDelay: `${index * 0.1}s` }}
+                            >
+                                {letter}
+                            </span>
+                        ))}
+                        {"%"} completed
+                    </div>
                     <div className={styles.progressWrapper}>
-                        <div className={styles.progress} style={{ width: `${progressPercentage}%` }} />
+                        <div
+                            className={styles.progress}
+                            style={{ width: `${progressPercentage}%` }}
+                        />
                     </div>
                 </div>
                 <div className={styles.card}>
@@ -43,11 +59,13 @@ export default function Quiz() {
         );
     };
 
-
     const renderResults = () => {
         return (
             <div className={styles.card}>
-                <h1>Review</h1>
+                <div className={styles.title}>
+                    <h1>review</h1>
+                    <h3>summary of your answers</h3>
+                </div>
                 {quizData.map((question, index) => {
                     const { title, options } = question;
                     const selectedOptionIndex = answers[index];
@@ -75,10 +93,19 @@ export default function Quiz() {
                 </style>
             </Head>
             <main className={styles.main}>
+
                 {currentQuestion < quizData.length ? renderCurrentQuestion() : renderResults()}
                 <div className={styles.buttons}>
-                    {currentQuestion > 0 && <button onClick={() => setCurrentQuestion(currentQuestion - 1)}>back</button>}
-                    {currentQuestion < quizData.length - 1 && <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>next question</button>}
+                    {currentQuestion > 0 && (
+                        <button onClick={() => setCurrentQuestion(currentQuestion - 1)}>
+                            <span>&#8592; Back</span>
+                        </button>
+                    )}
+                    {currentQuestion < quizData.length - 1 && (
+                        <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
+                            <span>Next &#8594;</span>
+                        </button>
+                    )}
                 </div>
             </main>
         </>
