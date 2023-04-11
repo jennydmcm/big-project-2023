@@ -6,10 +6,13 @@ import Logo from '@/public/icons/logo.svg'
 export default function Logomark() {
     return (
 
-        <Image src={Logo}
+        <Image
+            href="/"
+            src={Logo}
             width={173}
             height={60}
         />
+
 
     )
 };
