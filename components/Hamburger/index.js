@@ -2,6 +2,14 @@ import Image from "next/image";
 import menu from "@/public/icons/menu.svg";
 import { useState } from "react";
 import styles from "@/components/Hamburger/Hamburger.module.css";
+import home from '@/public/icons/home.svg'
+import pill from '@/public/icons/pills.svg'
+import eye from '@/public/icons/eye.svg'
+import spray from '@/public/icons/spray 2.svg'
+import injection from '@/public/icons/syringe.svg'
+import rights from '@/public/icons/rights.svg'
+import resources from '@/public/icons/resources.svg'
+
 
 export default function Menu() {
     const [isActive, setIsActive] = useState(false);
@@ -23,26 +31,33 @@ export default function Menu() {
                                 </div>
                                 <ul className={styles.list}>
                                     <a href="/"
-                                        className={styles.text_link} >home
+                                        className={styles.text_link} >
+                                        <Image src={home} className={styles.img_link} />home
                                     </a>
                                     <a href="/lessonone"
-                                        className={styles.text_link} >lesson 1
+                                        className={styles.text_link} >
+                                        <Image src={pill} className={styles.img_link} />lesson 1
                                     </a>
                                     <a href="/lessontwo"
-                                        className={styles.text_link} >lesson 2
+                                        className={styles.text_link} >
+                                        <Image src={eye} className={styles.img_link} />lesson 2
                                     </a>
                                     <a href="/lessonthree"
-                                        className={styles.text_link} >lesson 3
+                                        className={styles.text_link} >
+                                        <Image src={spray} className={styles.img_link} />lesson 3
                                     </a>
                                     <a href="/lessonfour"
-                                        className={styles.text_link} >lesson 4
+                                        className={styles.text_link} >
+                                        <Image src={injection} className={styles.img_link} />lesson 4
                                     </a>
                                     <a href="/knowyourrights"
-                                        className={styles.text_link}> know your rights
+                                        className={styles.text_link}>
+                                        <Image src={rights} className={styles.img_link} />know your rights
 
                                     </a>
                                     <a href="/resources"
-                                        className={styles.text_link}> resources
+                                        className={styles.text_link}>
+                                        <Image src={resources} className={styles.img_link} />resources
                                     </a>
                                 </ul>
                             </div>
