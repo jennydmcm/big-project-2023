@@ -1,0 +1,68 @@
+[
+    {
+        "title": "administering nalaxone spray",
+        "information": "Here’s how to administer nalaxone nasal spray.",
+        "options": [
+             "Back to Menu", 
+             "Continue"
+        ]
+
+    },
+
+
+    {
+        "title": "administering nalaxone spray",
+        "header": "How effective is Nalaxone?",
+        "information": "Lay the person on their back to receive their dosage. Remove the nasal spray from the box.",
+        "options": [ 
+            "Back to Menu", 
+            "Continue" 
+        ]
+
+    },
+
+    {
+        "title": "administering nalaxone spray",
+        "header": "Who can take Nalaxone?",
+        "information": "Hold the spray with your thumb on the bottom of the red plunger. Your first and middle fingers should be on either side of the nozzle.",
+        "options": [ 
+            "Back to Menu", 
+            "Continue" 
+        ]
+
+    },
+
+    {
+        "title": "administering nalaxone spray",
+        "information": "Provide support under the person’s neck with your hand and tilt their head back. Gently insert the tip of the nozzle into one nostril until your first and middle fingers reach the bottom of their nose.",
+        "options": [
+             "Back to Menu", 
+             "Continue"
+        ]
+
+    },
+
+    {
+        "title": "administering nalaxone spray",
+        "information": "Firmly press the red plunger to spray into their nose. Remove the spray from the nostril after giving the dosage.",
+        "options": [
+             "Back to Menu", 
+             "Continue"
+        ]
+
+    },
+
+    {
+        "title": "administering nalaxone spray",
+        "information": "Lesson Complete!",
+        "options": [
+             "Next Lesson", 
+             "Menu"
+        ]
+
+    }
+]
+
+
+
+
