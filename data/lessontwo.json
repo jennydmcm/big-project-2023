@@ -1,0 +1,48 @@
+[
+    {
+        "title": "spotting an overdose",
+        "information": "Here is how to administer a nalaxone injection.",
+        "options": [
+             "Back to Menu", 
+             "Continue"
+        ]
+
+    },
+
+
+    {
+        "title": "spotting an overdose",
+        "header": "Signs + Symptoms",
+        "information": "Extremely small pupils, Cold + clammy skin, Dizziness/confusion, Drowsiness, Choking, gurgling, snoring sounds, Slow/no breathing", 
+        "options": [ 
+            "Back to Menu", 
+            "Continue" 
+        ]
+
+    },
+
+    {
+        "title": "spotting an overdose",
+        "header": "Responding to overdose",
+        "information": "Call 911 right away, Give Naloxone while waiting for help , Follow the steps in your naloxone kit/from emergency help line operator, Provide another naloxone dose if needed",
+        "options": [ 
+            "Back to Menu", 
+            "Continue" 
+        ]
+
+    },
+
+    {
+        "title": "spotting an overdose",
+        "information": "Lesson Complete!",
+        "options": [
+             "Next Lesson", 
+             "Menu"
+        ]
+
+    }
+]
+
+
+
+
