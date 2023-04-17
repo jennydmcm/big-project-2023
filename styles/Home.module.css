@@ -22,12 +22,14 @@
 
 .introP {
   font-weight: 400;
+  font-family: Figtree;
 }
 
 .introText {
   padding-left: 20px;
   padding-right: 20px;
   color: var(--savoy-blue);
+  font-family: Figtree;
 }
 
 .lessons {
