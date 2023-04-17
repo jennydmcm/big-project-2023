@@ -37,7 +37,7 @@ export default function lessonFour() {
     const router = useRouter();
 
     function handleReturn() {
-        router.push('/');
+        router.push('/home');
     }
 
     const [currentImage, setCurrentImage] = useState(0)
