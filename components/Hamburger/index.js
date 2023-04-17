@@ -34,15 +34,15 @@ export default function Menu() {
                                         className={styles.text_link} >
                                         <Image src={home} className={styles.img_link} />home
                                     </a>
-                                    <a href="/lessonone"
+                                    <a href="/lessonOne"
                                         className={styles.text_link} >
                                         <Image src={pill} className={styles.img_link} />lesson 1
                                     </a>
-                                    <a href="/lessontwo"
+                                    <a href="/lessonTwo"
                                         className={styles.text_link} >
                                         <Image src={eye} className={styles.img_link} />lesson 2
                                     </a>
-                                    <a href="/lessonthree"
+                                    <a href="/lessonThree"
                                         className={styles.text_link} >
                                         <Image src={spray} className={styles.img_link} />lesson 3
                                     </a>

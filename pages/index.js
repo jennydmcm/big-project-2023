@@ -34,7 +34,7 @@ export default function homePage() {
           <Link style={{
             textDecoration: 'none'
 
-          }} href="/lessonone">
+          }} href="/lessonOnept1">
             <Lesson1 />
           </Link >
           <Link style={{ textDecoration: 'none' }} href="/lessontwo">
