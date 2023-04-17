@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import styles from '@/components/Quiz/Quiz.module.css';
 import quizData from '@/data/questions.json';
@@ -6,6 +7,7 @@ import quizData from '@/data/questions.json';
 export default function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState([]);
+    const router = useRouter();
 
     const handleAnswerClick = (answerIndex) => {
         const updatedAnswers = [...answers];
@@ -61,26 +63,33 @@ export default function Quiz() {
 
     const renderResults = () => {
         return (
-            <div className={styles.card}>
-                <div className={styles.title}>
-                    <h1>review</h1>
-                    <h3>summary of your answers</h3>
-                </div>
-                {quizData.map((question, index) => {
-                    const { title, options } = question;
-                    const selectedOptionIndex = answers[index];
-                    const selectedOption = options[selectedOptionIndex];
+            <div className={styles.resultsContainer}>
+                <div className={styles.card}>
+                    <div className={styles.results}>
+                        {quizData.map((question, index) => {
+                            const { title, options } = question;
+                            const selectedOptionIndex = answers[index];
+                            const selectedOption = options[selectedOptionIndex];
 
-                    return (
-                        <div key={index} className={styles.result}>
-                            <h2>{title}</h2>
-                            <p>{selectedOption}</p>
-                        </div>
-                    );
-                })}
+                            return (
+                                <div key={index} className={styles.result}>
+                                    <div className={styles.userAnswers}>
+                                        <h2>{title}</h2>
+                                        <p>{selectedOption}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
         );
     };
+
+    const handleContinueClick = () => {
+        router.push('/home');
+    };
+
 
     return (
         <>
@@ -93,7 +102,6 @@ export default function Quiz() {
                 </style>
             </Head>
             <main className={styles.main}>
-
                 {currentQuestion < quizData.length ? renderCurrentQuestion() : renderResults()}
                 <div className={styles.buttons}>
                     {currentQuestion > 0 && (
@@ -104,6 +112,11 @@ export default function Quiz() {
                     {currentQuestion < quizData.length - 1 && (
                         <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
                             <span>Next &#8594;</span>
+                        </button>
+                    )}
+                    {currentQuestion >= quizData.length && (
+                        <button onClick={handleContinueClick}>
+                            <span>Continue &#8594;</span>
                         </button>
                     )}
                 </div>

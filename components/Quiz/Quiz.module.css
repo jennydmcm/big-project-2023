@@ -63,7 +63,7 @@
     align-items: center;
     justify-content: center;
     width: 22rem;
-    height: 25rem;
+    height: 26rem;
     color: var(--coral-pink);
     background-color: var(--white);
     border: 2px solid var(--white);
@@ -154,3 +154,22 @@
   text-decoration: none;
   position: relative;
 }
+
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+  height: 40rem;
+}
+
+.title{
+   margin: -1rem; 
+}
+
+
+.results {
+  display: flex;
+  flex-direction: column;
+}
+
