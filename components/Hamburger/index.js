@@ -46,7 +46,7 @@ export default function Menu() {
                                         className={styles.text_link} >
                                         <Image src={spray} className={styles.img_link} />lesson 3
                                     </a>
-                                    <a href="/lessonfour"
+                                    <a href="/lessonFour"
                                         className={styles.text_link} >
                                         <Image src={injection} className={styles.img_link} />lesson 4
                                     </a>
