@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import styles from '@/styles/QOne.module.css';
+
 
 
 const data = [
@@ -72,14 +74,14 @@ export default function IndexPage() {
   };
 
   return (
-    <div>
-      <h1>{data[currentData].title}</h1>
-      {data[currentData].header && <h2>{data[currentData].header}</h2>}
-      <p>{data[currentData].information}</p>
+    <div className={styles.main}>
+      <h1 className={styles.header}>{data[currentData].title}</h1>
+      {data[currentData].header && <h2 className={styles.header2}>{data[currentData].header}</h2>}
+      <p className={styles.captions}>{data[currentData].information}</p>
       <ul>
         {data[currentData].options.map((option) => (
           <li key={option}>
-            <button onClick={() => handleOptionClick(option)}>{option}</button>
+            <button className={styles.button} onClick={() => handleOptionClick(option)}>{option}</button>
           </li>
         ))}
       </ul>
