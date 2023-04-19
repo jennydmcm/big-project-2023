@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import styles from '@/styles/QThree.module.css';
+import Image from 'next/image';
 
+const images = [
+  '/lessonthreepageone.svg',
+  '/lessonthreepagetwo.svg',
+  '/lessonthreepagethree.svg',
+  '/lessonthreepagefour.svg',
+  '/lessonthreepagefive.svg',
+  '/checkmark.svg',
+]
 
 const data = [
   {
@@ -39,31 +48,40 @@ const data = [
 
 export default function IndexPage() {
   const [currentData, setCurrentData] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
 
   const handleOptionClick = (option) => {
     if (option === 'Back to Menu') {
       setCurrentData(0);
+      setCurrentImage(0);
     } else if (option === 'Continue') {
-      setCurrentData(currentData + 1);
+      if (currentImage < images.length - 1) {
+        setCurrentImage(currentImage + 1);
+      } else {
+        setCurrentData(currentData + 1);
+        setCurrentImage(0);
+      }
     } else if (option === 'Next Lesson') {
       setCurrentData(currentData + 1);
+      setCurrentImage(0);
     } else if (option === 'Menu') {
       setCurrentData(0);
+      setCurrentImage(0);
     }
   };
+
 
   return (
     <div className={styles.main}>
       <h1 className={styles.header}>{data[currentData].title}</h1>
+      <Image className={styles.image} src={images[currentImage]} alt={`Image ${currentImage + 1}`} width={200} height={200} />
       {data[currentData].header && <h2 className={styles.header2}>{data[currentData].header}</h2>}
-      <p className={styles.captions}>{data[currentData].information}</p>
-      <ul>
+      <p className={styles.captions} style={{ fontSize: '14px' }}>{data[currentData].information}</p>
+      <div>
         {data[currentData].options.map((option) => (
-          <li key={option}>
-            <button className={styles.button} onClick={() => handleOptionClick(option)}>{option}</button>
-          </li>
+          <button className={styles.button} onClick={() => handleOptionClick(option)} key={option} style={{width: '100%', height: '50px', margin: '10px 0'}}>{option}</button>
         ))}
-      </ul>
+      </div>
     </div>
   );
-}
+}  
