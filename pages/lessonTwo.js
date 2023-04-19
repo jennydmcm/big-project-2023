@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from '@/styles/QTwo.module.css';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+
 
 const images = [
   '/lessontwopageone.svg',
@@ -14,36 +16,25 @@ const data = [
   {
     "title": "spotting an overdose",
     "information": "Here is how to administer a nalaxone injection.",
-    "options": [
-      "Back to Menu", 
-      "Continue"
-    ]
+    "options": ["Next"]
+
   },
   {
     "title": "spotting an overdose",
     "header": "Signs + Symptoms",
     "information": "Extremely small pupils, Cold + clammy skin, Dizziness/confusion, Drowsiness, Choking, gurgling, snoring sounds, Slow/no breathing", 
-    "options": [
-      "Back to Menu", 
-      "Continue" 
-    ]
+    options: ["Back", "Next"]
   },
   {
     "title": "spotting an overdose",
     "header": "Responding to overdose",
     "information": "Call 911 right away, Give Naloxone while waiting for help , Follow the steps in your naloxone kit/from emergency help line operator, Provide another naloxone dose if needed",
-    "options": [
-      "Back to Menu", 
-      "Continue" 
-    ]
+    options: ["Back", "Next"]
   },
   {
     "title": "spotting an overdose",
     "information": "Lesson Complete!",
-    "options": [
-      "Next Lesson", 
-      "Menu"
-    ]
+    "options": ["Next Lesson"]
   }
 ];
 
@@ -51,25 +42,24 @@ export default function IndexPage() {
   const [currentData, setCurrentData] = useState(0);
   const [currentImage, setCurrentImage] = useState(0);
 
+  const router = useRouter();
+
   const handleOptionClick = (option) => {
-    if (option === 'Back to Menu') {
-      setCurrentData(0);
-      setCurrentImage(0);
-    } else if (option === 'Continue') {
-      if (currentImage < images.length - 1) {
-        setCurrentImage(currentImage + 1);
-      } else {
-        setCurrentData(currentData + 1);
-        setCurrentImage(0);
+    if (option === 'Back') {
+      setCurrentData((currentData) => currentData - 1);
+      setCurrentImage((currentImage) => currentImage - 1);
+    } else if (option === 'Next') {
+      if (currentData < data.length - 1) {
+        setCurrentData((currentData) => currentData + 1);
+        setCurrentImage((currentImage) => currentImage + 1);
       }
     } else if (option === 'Next Lesson') {
-      setCurrentData(currentData + 1);
-      setCurrentImage(0);
-    } else if (option === 'Menu') {
-      setCurrentData(0);
-      setCurrentImage(0);
+      router.push('/lessonThree');
     }
   };
+  
+  const isLastPage = currentData === data.length - 1;
+  const isFirstPage = currentData === 0;
 
 
   return (

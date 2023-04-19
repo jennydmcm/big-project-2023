@@ -5,6 +5,8 @@
     align-items: center;
     background-color: var(--white);
     height: 896px;
+    width: 414px;
+
 }
 
 .header {

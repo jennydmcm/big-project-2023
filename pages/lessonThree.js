@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from '@/styles/QThree.module.css';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+
 
 const images = [
   '/lessonthreepageone.svg',
@@ -15,34 +17,39 @@ const data = [
   {
     title: 'administering nalaxone spray',
     information: 'Here’s how to administer nalaxone nasal spray.',
-    options: ['Back to Menu', 'Continue'],
+    options: ["Next"]
+
   },
   {
     title: 'administering nalaxone spray',
     header: 'How effective is Nalaxone?',
     information: 'Lay the person on their back to receive their dosage. Remove the nasal spray from the box.',
-    options: ['Back to Menu', 'Continue'],
+    options: ["Back", "Next"]
   },
   {
     title: 'administering nalaxone spray',
     header: 'Who can take Nalaxone?',
     information: 'Hold the spray with your thumb on the bottom of the red plunger. Your first and middle fingers should be on either side of the nozzle.',
     options: ['Back to Menu', 'Continue'],
+    "options": ["Back", "Next"]
   },
   {
     title: 'administering nalaxone spray',
     information: 'Provide support under the person’s neck with your hand and tilt their head back. Gently insert the tip of the nozzle into one nostril until your first and middle fingers reach the bottom of their nose.',
     options: ['Back to Menu', 'Continue'],
+    "options": ["Back", "Next"]
   },
   {
     title: 'administering nalaxone spray',
     information: 'Firmly press the red plunger to spray into their nose. Remove the spray from the nostril after giving the dosage.',
     options: ['Back to Menu', 'Continue'],
+    "options": ["Back", "Next"]
   },
   {
     title: 'administering nalaxone spray',
     information: 'Lesson Complete!',
     options: ['Next Lesson', 'Menu'],
+    "options": ["Next Lesson"]
   },
 ];
 
@@ -50,26 +57,24 @@ export default function IndexPage() {
   const [currentData, setCurrentData] = useState(0);
   const [currentImage, setCurrentImage] = useState(0);
 
+  const router = useRouter();
+
   const handleOptionClick = (option) => {
-    if (option === 'Back to Menu') {
-      setCurrentData(0);
-      setCurrentImage(0);
-    } else if (option === 'Continue') {
-      if (currentImage < images.length - 1) {
-        setCurrentImage(currentImage + 1);
-      } else {
-        setCurrentData(currentData + 1);
-        setCurrentImage(0);
+    if (option === 'Back') {
+      setCurrentData((currentData) => currentData - 1);
+      setCurrentImage((currentImage) => currentImage - 1);
+    } else if (option === 'Next') {
+      if (currentData < data.length - 1) {
+        setCurrentData((currentData) => currentData + 1);
+        setCurrentImage((currentImage) => currentImage + 1);
       }
     } else if (option === 'Next Lesson') {
-      setCurrentData(currentData + 1);
-      setCurrentImage(0);
-    } else if (option === 'Menu') {
-      setCurrentData(0);
-      setCurrentImage(0);
+      router.push('/lessonFour');
     }
   };
-
+  
+  const isLastPage = currentData === data.length - 1;
+  const isFirstPage = currentData === 0;
 
   return (
     <div className={styles.main}>
