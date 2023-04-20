@@ -13,8 +13,14 @@ export default function Quiz() {
         const updatedAnswers = [...answers];
         updatedAnswers[currentQuestion] = answerIndex;
         setAnswers(updatedAnswers);
-        setCurrentQuestion(currentQuestion + 1);
+
+        if (currentQuestion === 0 && answerIndex === 2) {
+            setCurrentQuestion(3);
+        } else {
+            setCurrentQuestion(currentQuestion + 1);
+        }
     };
+
 
     const renderCurrentQuestion = () => {
         const { title, question, options } = quizData[currentQuestion];
@@ -73,7 +79,7 @@ export default function Quiz() {
                         {quizData.map((question, index) => {
                             const { title, options } = question;
                             const selectedOptionIndex = answers[index];
-                            const selectedOption = options[selectedOptionIndex];
+                            const selectedOption = selectedOptionIndex !== undefined ? options[selectedOptionIndex] : 'N/A';
 
                             return (
                                 <div key={index} className={styles.result}>
