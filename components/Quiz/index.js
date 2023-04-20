@@ -65,6 +65,10 @@ export default function Quiz() {
         return (
             <div className={styles.resultsContainer}>
                 <div className={styles.card}>
+                    <div className={styles.review}>
+                        <h1>Review</h1>
+                        <p>Summary of your answers:</p>
+                    </div>
                     <div className={styles.results}>
                         {quizData.map((question, index) => {
                             const { title, options } = question;
@@ -74,8 +78,8 @@ export default function Quiz() {
                             return (
                                 <div key={index} className={styles.result}>
                                     <div className={styles.userAnswers}>
-                                        <h2>{title}</h2>
-                                        <p>{selectedOption}</p>
+                                        <h2 className={styles.headingResults}>{title}</h2>
+                                        <p className={styles.cardOption}>{selectedOption}</p>
                                     </div>
                                 </div>
                             );
@@ -107,11 +111,6 @@ export default function Quiz() {
                     {currentQuestion > 0 && (
                         <button onClick={() => setCurrentQuestion(currentQuestion - 1)}>
                             <span>&#8592; Back</span>
-                        </button>
-                    )}
-                    {currentQuestion < quizData.length - 1 && (
-                        <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
-                            <span>Next &#8594;</span>
                         </button>
                     )}
                     {currentQuestion >= quizData.length && (

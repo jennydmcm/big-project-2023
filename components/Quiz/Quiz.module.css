@@ -64,7 +64,7 @@
     justify-content: center;
     width: 22rem;
     height: 26rem;
-    color: var(--coral-pink);
+    color: var(--vista-blue);
     background-color: var(--white);
     border: 2px solid var(--white);
     border-radius: 1rem;
@@ -95,6 +95,7 @@
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+  padding-top: 2rem;
   font-size: 1.2rem;
   width: 20rem;
 }
@@ -135,7 +136,7 @@
   display: flex;
   flex-direction: row !important;
   justify-content: space-between;
-  gap: 12rem;
+  gap: 10rem;
 }
   
 .buttons > button {
@@ -159,17 +160,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 22rem;
   height: 40rem;
+
 }
 
 .title{
    margin: -1rem; 
 }
 
-
-.results {
+.userAnswers{
   display: flex;
   flex-direction: column;
+  margin-bottom: -1rem;
+  color: var(--coral-pink);
 }
 
+.headingResults{
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.cardOption{
+  margin-top: -1rem;
+}
+
+.cardOption > p{
+  padding-top: 2rem;
+}
+
+.review{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.review > h1{
+  margin-top:3rem;
+}
+
+.review > p{
+  margin-top:-1rem;
+}
+
+.results{
+  padding-bottom: 4rem;
+}
