@@ -1,35 +1,36 @@
 [
     {
-        "title": "experience",
-        "question": "do you have any experience with drug use, either personally or through someone you know?",
+        "title": "Experience",
+        "question": "Do you have any experience with drug use, either personally or through someone you know?",
         "options": [
-          "i have personally used drugs before",
-          "someone close to me has used drugs"
+          "I have personally used drugs before",
+          "Someone close to me has used drugs",
+          "I'm not a drug user/know anyone that does"
         ]
       },
       {
-        "title": "substance use",
-        "question": "do you have any experience using substances recreationally, or are you/someone close dealing with addiction or dependency?",
+        "title": "Substance Use",
+        "question": "Do you have any experience using substances recreationally, or are you/someone close dealing with addiction or dependency?",
         "options": [
-          "recreational use only",
-          "dealing with dependency"
+          "Recreational use only",
+          "Dealing with dependency"
         ]
       },
       {
-        "title": "substance type",
-        "question": "what substance(s) are being used?",
+        "title": "Substance Type",
+        "question": "What substance(s) are being used?",
         "options": [
-          "prescripted",
-          "non-medical"
+          "Prescripted",
+          "Non-medical"
         ]
       },
       {
-        "title": "familiarity",
-        "question": "how much do you know about safe substance use and responding to a drug overdose?",
+        "title": "Familiarity",
+        "question": "How much do you know about safe substance use and responding to a drug overdose?",
         "options": [
-          "little knowledge",
-          "moderate",
-          "well educated"
+          "Little knowledge",
+          "Moderate",
+          "Well educated"
         ]
       }
       
