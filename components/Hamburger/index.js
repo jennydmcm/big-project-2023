@@ -30,7 +30,7 @@ export default function Menu() {
                                         x</h1>
                                 </div>
                                 <ul className={styles.list}>
-                                    <a href="/"
+                                    <a href="/home"
                                         className={styles.text_link} >
                                         <Image src={home} className={styles.img_link} />home
                                     </a>
