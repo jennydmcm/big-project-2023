@@ -8,6 +8,15 @@
     width: 414px;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 414px;
+    height: 107px;
+    background-color: var(--white);
+}
+
 .header {
     color: var(--savoy-blue);
     font-family: Days One;

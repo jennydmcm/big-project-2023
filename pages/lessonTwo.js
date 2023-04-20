@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styles from '@/styles/QTwo.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Logomark from '@/components/Logo';
+import Hamburger from '@/components/Hamburger'
 
 
 const images = [
@@ -22,7 +24,7 @@ const data = [
   {
     "title": "spotting an overdose",
     "header": "Signs + Symptoms",
-    "information": "Extremely small pupils, Cold + clammy skin, Dizziness/confusion, Drowsiness, Choking, gurgling, snoring sounds, Slow/no breathing", 
+    "information": "Extremely small pupils, Cold + clammy skin, Dizziness/confusion, Drowsiness, Choking, gurgling, snoring sounds, Slow/no breathing",
     options: ["Back", "Next"]
   },
   {
@@ -57,25 +59,30 @@ export default function IndexPage() {
       router.push('/lessonThree');
     }
   };
-  
+
   const isLastPage = currentData === data.length - 1;
   const isFirstPage = currentData === 0;
 
 
   return (
     <div className={styles.main}>
+      <div className={styles.navbar}>
+        <Logomark className={styles.logomark} />
+
+        <Hamburger className={styles.hamburger} />
+      </div>
       <h1 className={styles.header}>{data[currentData].title}</h1>
       <Image className={styles.image} src={images[currentImage]} alt={`Image ${currentImage + 1}`} width={200} height={200} />
       {data[currentData].header && <h2 className={styles.header2}>{data[currentData].header}</h2>}
       <p className={styles.captions} style={{ fontSize: '14px' }}>{data[currentData].information}</p>
       <div>
         {data[currentData].options.map((option) => (
-          <button className={styles.button} onClick={() => handleOptionClick(option)} key={option} style={{width: '100%', height: '50px', margin: '10px 0'}}>{option}</button>
+          <button className={styles.button} onClick={() => handleOptionClick(option)} key={option} style={{ width: '100%', height: '50px', margin: '10px 0' }}>{option}</button>
         ))}
       </div>
     </div>
   );
-}  
+}
 
 
 

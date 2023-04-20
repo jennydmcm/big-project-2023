@@ -26,6 +26,7 @@ export default function knowYourRights() {
                 <h2 className={styles.subtitle}>are you aware of the<br></br>Good Samaritan<br></br>Drug Overdose Act?</h2>
                 <h2 className={styles.quote}>“No one who seeks emergency medical or law enforcement assistance because that person, or another person, is suffering from an overdose is to be charged or convicted under subsection 4(1)”</h2>
                 <h2 className={styles.source}>(Consolidated federal laws of Canada, good samaritan drug overdose act, 2023)</h2>
+                <h2 className={styles.psa}>Tell others about the Good Samaritan Drug Overdose Act – you could save a life. </h2>
                 <div className={styles.info1}>
                     <h3 className={styles.listTitle}>This act <i>protects </i>individuals that:</h3>
                     <li className={styles.list}>Seek emergency support during overdose (including the person experiencing it) </li>
@@ -40,7 +41,7 @@ export default function knowYourRights() {
                     <li className={styles.list}>Remain calm and reassure the person</li>
                 </div>
 
-                <h2 className={styles.psa}>Tell others about the Good Samaritan Drug Overdose Act – you could save a life. </h2>
+
             </main >
         </>
     )

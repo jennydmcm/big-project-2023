@@ -8,6 +8,8 @@ import Image from 'next/image';
 import backarrow from 'public/icons/backarrow.svg'
 import nextarrow from 'public/icons/nextarrow.svg'
 import { useRouter } from 'next/router';
+import Logomark from '@/components/Logo';
+import Hamburger from '@/components/Hamburger'
 
 const images = [
 
@@ -70,6 +72,7 @@ export default function lessonFour() {
             <div className={styles.navbar}>
                 <Logomark className={styles.logomark} />
 
+                <Hamburger className={styles.hamburger} />
             </div>
             <div className={styles.lesson}>
                 <h1 className={styles.title} >administering a naloxone injection</h1>
