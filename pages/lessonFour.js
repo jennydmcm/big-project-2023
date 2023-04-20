@@ -8,7 +8,6 @@ import Image from 'next/image';
 import backarrow from 'public/icons/backarrow.svg'
 import nextarrow from 'public/icons/nextarrow.svg'
 import { useRouter } from 'next/router';
-import Logomark from '@/components/Logo';
 import Hamburger from '@/components/Hamburger'
 
 const images = [
