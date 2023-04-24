@@ -8,6 +8,7 @@ const images = [
   '/lessontwopageone.svg',
   '/lessontwopagetwo.svg',
   '/lessontwopagethree.svg',
+  '/lessontwopagefour.svg',
   '/checkmark.svg',
 ]
 
