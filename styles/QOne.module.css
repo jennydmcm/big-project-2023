@@ -15,6 +15,7 @@
     width: 414px;
     height: 107px;
     background-color: var(--white);
+    z-index: 1;
 }
 
 .header {
@@ -61,4 +62,22 @@
     text-align: center;
     background-color: var(--savoy-blue);
     color: var(--white);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.image {
+    animation: float 3s ease-in-out infinite;
 }

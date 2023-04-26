@@ -78,7 +78,7 @@ export default function IndexPage() {
         <Hamburger className={styles.hamburger} />
       </div>
       <h1 className={styles.header}>{data[currentData].title}</h1>
-      <Image className={styles.image} src={images[currentImage]} alt={`Image ${currentImage + 1}`} width={200} height={200} />
+      <Image className={`${styles.image} ${styles.floatingImage}`} src={images[currentImage]} alt={`Image ${currentImage + 1}`} width={200} height={200} />
       {data[currentData].header && <h2 className={styles.header2}>{data[currentData].header}</h2>}
       <p className={styles.captions} style={{ fontSize: '14px' }}>{data[currentData].information}</p>
       <div>
