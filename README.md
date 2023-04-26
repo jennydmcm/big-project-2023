@@ -1,4 +1,4 @@
-# Naxolone Harm Reduction Application
+# Nalaxone Harm Reduction Application
 
 ## Members
 
@@ -8,7 +8,7 @@
 
 ## Application Description
 
-An application demonstrating how to administer naloxone, safe drug use, access to drug testing and safe supply around you.
+An application demonstrating how to administer nalaxone, safe drug use, access to drug testing and safe supply around you.
 
 ## Tools/Technology Used
 
@@ -19,10 +19,11 @@ An application demonstrating how to administer naloxone, safe drug use, access t
 - Next.js 13
 - Vercel
 - Github
-- Playwright
 
 ## Command Line(s)
 
 - npx create-next-app
 - npm run dev
 - npm i react-chartjs-2
+
+## Resources
