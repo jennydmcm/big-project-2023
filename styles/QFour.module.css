@@ -98,11 +98,15 @@
 .nextarrow {
     width: 7px;
     margin-left: 10px;
+    float: none;
+
 }
 
 .backarrow {
     width: 7px;
     margin-right: 10px;
+    float: none;
+
 }
 
 .captions {
