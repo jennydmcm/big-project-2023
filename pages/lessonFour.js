@@ -77,7 +77,7 @@ export default function lessonFour() {
             </div>
             <div className={styles.lesson}>
                 <h1 className={styles.title} >administering a naloxone injection</h1>
-                <img className={styles.image} src={images[currentImage]} alt={`Image ${currentImage + 1}`} />
+                <img className={`${styles.image} ${styles['image-animation']}`} src={images[currentImage]} alt={`Image ${currentImage + 1}`} />
                 <p className={styles.captions} >{captions[currentImage]}</p>
                 <div className={styles.buttons}>
                     {currentImage > 0 && (
