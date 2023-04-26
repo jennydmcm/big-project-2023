@@ -20,6 +20,7 @@ const images = [
     '/lesson-four/page5.svg',
     '/lesson-four/page6.svg',
     '/complete.svg',
+    './harmreductionbadge.svg',
 ]
 
 
@@ -31,7 +32,8 @@ const captions = [
     'Insert the needle into the muscle at a 90-degree angle. Push the plunger down all the way to inject the naloxone.',
     'After injecting, remove the needle and massage the injection site for a few seconds to help the medication spread through the muscle. Call emergency services right away and stay with the person until help arrives.',
     'It’s important to note that nasal Naloxone is a temporary measure and does not replace emergency medical care. Seek medical attention right away after administering Naloxone, as the effects of the overdose can return once the Naloxone wears off.',
-    'lesson complete!'
+    'lesson complete!',
+    'Congratulations, you are now a harm reduction hero!'
 ]
 export default function lessonFour() {
 
