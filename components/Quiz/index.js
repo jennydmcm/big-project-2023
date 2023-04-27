@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Head from 'next/head';
 import styles from '@/components/Quiz/Quiz.module.css';
 import quizData from '@/data/questions.json';
@@ -68,6 +69,24 @@ export default function Quiz() {
     };
 
     const renderResults = () => {
+        const familiarityAnswer = answers[3];
+        let message = '';
+        let lessonLink = '';
+
+        if (familiarityAnswer === 0) {
+            message = "If you know a bit about naloxone and recreational opioid use, it's important to keep educating yourself about the risks and benefits of opioid use. In case of an emergency, it's essential to have access to naloxone. If you or someone you know is struggling with opioid addiction, reach out to a healthcare provider or addiction specialist for support and guidance.";
+            lessonLink = "./pages/lessonOne";
+        } else if (familiarityAnswer === 1) {
+            message = "If you've heard of naloxone and recreational opioid use, it's important to continue educating yourself on the topic to understand the potential risks and benefits. It's crucial to have access to naloxone in case of an emergency. If you or someone you know is dealing with opioid addiction, seeking guidance and support from a healthcare provider or addiction specialist can be helpful.";
+            lessonLink = "./pages/lessonTwo";
+        } else if (familiarityAnswer === 2) {
+            message = "If you have a good understanding of naloxone and rec, as well as the risks of recreational opioid use, it's important to have access to Naloxone and know how to use it properly. Naloxone is available without a prescription at most pharmacies. You can also check with your local health department or community organizations to obtain a free naloxone kit. However, it's important to remember that naloxone is not a substitute for seeking medical care and counselling for addiction.";
+            lessonLink = "./pages/lessonThree";
+        } else {
+            message = "If you have a thorough understanding of naloxone, its use, and the risks of recreational opioid use, it's important to continue educating yourself on the topic. Additionally, if you or someone you know is struggling with opioid addiction, seeking professional guidance and support is critical. Finding harm reduction services in your area can also be helpful.";
+            lessonLink = "./pages/lessonFour";
+        }
+
         return (
             <div className={styles.resultsContainer}>
                 <div className={styles.card}>
@@ -92,9 +111,40 @@ export default function Quiz() {
                         })}
                     </div>
                 </div>
+                {message && <div className={styles.message}>{message}
+                    <div>
+                        {familiarityAnswer === 0 &&
+                            <div>
+                                <div>Based on what you answered, we recommend learning Lesson 1 as a starting point!:</div>
+                                <Link href="./pages/lessonOne">Lesson 1: What is Naloxone?</Link>
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        {familiarityAnswer === 1 &&
+                            <div>
+                                <div>Based on what you answered, we recommend starting on Lesson 2 for more information:</div>
+                                <Link href="./pages/lessonTwo">Lesson 2: Spotting an Overdose</Link>
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        {familiarityAnswer === 2 &&
+                            <div>
+                                <div>Based on what you answered, we recommend starting on these lessons to further expand your knowledge!:</div>
+                                <Link href="./pages/lessonThree">Lesson 3: Administering Naloxone Spray</Link>
+                                <div>
+                                    <Link href="./pages/lessonFour">Lesson 4: Administering Naloxone Injection</Link>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>}
+
             </div>
         );
     };
+
 
     const handleContinueClick = () => {
         router.push('/home');
