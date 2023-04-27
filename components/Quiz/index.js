@@ -116,7 +116,7 @@ export default function Quiz() {
                         {familiarityAnswer === 0 &&
                             <div>
                                 <div>Based on what you answered, we recommend learning Lesson 1 as a starting point!:</div>
-                                <Link href="./pages/lessonOne">Lesson 1: What is Naloxone?</Link>
+                                <Link href="/lessonOne">Lesson 1: What is Naloxone?</Link>
                             </div>
                         }
                     </div>
@@ -124,7 +124,7 @@ export default function Quiz() {
                         {familiarityAnswer === 1 &&
                             <div>
                                 <div>Based on what you answered, we recommend starting on Lesson 2 for more information:</div>
-                                <Link href="./pages/lessonTwo">Lesson 2: Spotting an Overdose</Link>
+                                <Link href="/lessonTwo">Lesson 2: Spotting an Overdose</Link>
                             </div>
                         }
                     </div>
@@ -132,9 +132,9 @@ export default function Quiz() {
                         {familiarityAnswer === 2 &&
                             <div>
                                 <div>Based on what you answered, we recommend starting on these lessons to further expand your knowledge!:</div>
-                                <Link href="./pages/lessonThree">Lesson 3: Administering Naloxone Spray</Link>
+                                <Link href="/lessonThree">Lesson 3: Administering Naloxone Spray</Link>
                                 <div>
-                                    <Link href="./pages/lessonFour">Lesson 4: Administering Naloxone Injection</Link>
+                                    <Link href="/lessonFour">Lesson 4: Administering Naloxone Injection</Link>
                                 </div>
                             </div>
                         }
