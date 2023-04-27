@@ -207,3 +207,15 @@
 .results{
   padding-bottom: 4rem;
 }
+
+.message {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding-top: -20px;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-top: 20px;
+}
