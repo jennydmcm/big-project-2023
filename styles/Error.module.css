@@ -1,0 +1,41 @@
+.main {
+    background-image: linear-gradient(to bottom, var(--white), var(--savoy-blue)70%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 414px;
+    height: 800px;
+    font-family: Figtree;
+
+}
+
+
+.text {
+    font-size: 30px;
+    width: 300px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 510;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
