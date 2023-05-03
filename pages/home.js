@@ -9,11 +9,14 @@ import Lesson1 from '@/components/Lesson1';
 import Lesson2 from '@/components/Lesson2';
 import Lesson3 from '@/components/Lesson3';
 import Lesson4 from '@/components/Lesson4';
+import IntroductionModal from '../components/IntroductionModal';
+
 
 export default function homePage() {
   var title = process.env.NEXT_PUBLIC_TITLE;
   return (
     <>
+    <IntroductionModal />
       <Head>
         <title>naloxONE</title>
         <link rel="icon" href="/icons/favicon.svg" />
