@@ -2,9 +2,11 @@ import { useState } from 'react';
 
 const IntroductionModal = () => {
   const [showModal, setShowModal] = useState(true);
+  const [showQuiz, setShowQuiz] = useState(false); // Add state variable for quiz component
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setShowQuiz(true); // Show quiz component when popup is closed
   };
 
   return (
@@ -21,6 +23,9 @@ const IntroductionModal = () => {
           </div>
         </div>
       )}
+      
+      {showQuiz && <Quiz />} {/* Conditionally render quiz component */}
+      
       <style jsx>{`
         .modal-container {
           position: fixed;
@@ -41,8 +46,7 @@ const IntroductionModal = () => {
           padding: 20px;
           border-radius: 15px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          max-width: 375px; /* Set maximum width to iPhone XR width */
-          width: 80%; /* Set width to 80% of max width */
+          max-width: 80%;
           text-align: center;
           font-family: Figtree, sans-serif;   
           position: relative;
@@ -70,9 +74,9 @@ const IntroductionModal = () => {
         }
 
         .modal-img {
-          width: 100px; /* Set image width to match iPhone XR */
+          width: 150px;
           position: absolute;
-          top: -70px; /* Adjust top position */
+          top: -110px;
           left: 50%;
           transform: translateX(-50%);
         }
