@@ -22,6 +22,10 @@ export default function Quiz() {
         }
     };
 
+    const handleIntroductionClose = () => {
+        setShowIntroduction(false);
+    };
+
 
     const renderCurrentQuestion = () => {
         const { title, question, options } = quizData[currentQuestion];
