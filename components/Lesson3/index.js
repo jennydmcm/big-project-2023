@@ -9,11 +9,15 @@ export default function Lesson3() {
             <div href="http://localhost:3000/contact" className={styles.container}>
                 <Image className={styles.icon} src={spray} />
                 <div className={styles.textbox}>
-                    <h2 className={styles.title} >lesson 3:</h2>
-                    <h2 className={styles.subtitle} >administering <br></br> naloxone spray</h2>
+                    <h2 className={styles.title}>Lesson 3:</h2>
+                    <h2 className={styles.subtitle}> Administering<br />Naloxone Spray</h2>
+                    <p className={styles.description}>
+                        Administering naloxone spray,<br />a simple and potentially life-saving process.
+                    </p>
                 </div>
-                <Image className={styles.arrow} src={arrow} />
-
+                <div className={styles.arrowContainer}>
+                    <Image className={styles.arrow} src={arrow} />
+                </div>
 
             </div>
 
