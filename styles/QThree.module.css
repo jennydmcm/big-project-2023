@@ -22,7 +22,6 @@
 
 .header {
     color: var(--savoy-blue);
-    font-family: Days One;
     font-size: 25px;
     text-align: center;
     width: 310px;
@@ -30,7 +29,6 @@
 
 .header2 {
     color: var(--savoy-blue);
-    font-family: Days One;
     font-size: 25px;
     text-align: center;
     width: 310px;

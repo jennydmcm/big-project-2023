@@ -5,23 +5,21 @@ import arrow from '@/public/icons/arrow.svg'
 
 export default function Lesson1() {
     return (
-        <>
-            <div href="http://localhost:3000/contact" className={styles.container}>
+        <div className={styles.container}>
+            <div className={styles.iconContainer}>
                 <Image className={styles.icon} src={naloxone} />
-                <div className={styles.textbox}>
-                    <h2 className={styles.title} >lesson 1:</h2>
-                    <h2 className={styles.subtitle} >what is naloxone?</h2>
-                </div>
+            </div>
+            <div className={styles.textbox}>
+                <h2 className={styles.title}>Lesson 1:</h2>
+                <h2 className={styles.subtitle}>What is Naloxone?</h2>
+                <p className={styles.description}>
+                    Naloxone is a medication designed to rapidly reverse opioid overdose.
+                    Learn more about it in this lesson.
+                </p>
+            </div>
+            <div className={styles.arrowContainer}>
                 <Image className={styles.arrow} src={arrow} />
-
-
             </div>
-            <div>
-                
-            </div>
-
-
-
-        </>
+        </div>
     )
 }

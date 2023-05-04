@@ -30,9 +30,9 @@ export default function homePage() {
         <Homeheroimg />
         <div className={styles.introText}>
           <h1>{title}</h1>
-          <h3 className={styles.introP} >we have easy-to-follow lessons on how to use naloxone and offer information on how to spot the signs of an overdose. find your local harm reduction services and <b>know your rights!</b>
+          <h3 className={styles.introP} >We have easy-to-follow lessons on how to use naloxone and offer information on how to spot the signs of an overdose. Find your local harm reduction services and <b>know your rights!</b>
           </h3>
-          <h1 className={styles.header} >your lessons</h1>
+          <h1 className={styles.header} >Your Lessons</h1>
         </div>
         <div className={styles.lessons}>
           <Link style={{
