@@ -3,19 +3,17 @@ import { useState, useEffect } from 'react';
 const IntroductionModal = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
   useEffect(() => {
-    const hasShownModal = localStorage.getItem('hasShownModal');
-    const hasCompletedQuiz = localStorage.getItem('hasCompletedQuiz');
-    
-    if (!hasShownModal && hasCompletedQuiz) {
+    const hasTakenQuiz = localStorage.getItem('hasTakenQuiz');
+    if (!hasTakenQuiz) {
       setShowModal(true);
-      localStorage.setItem('hasShownModal', true);
     }
   }, []);
+
+  const handleCloseModal = () => {
+    localStorage.setItem('hasTakenQuiz', true);
+    setShowModal(false);
+  };
 
   return (
     <>
