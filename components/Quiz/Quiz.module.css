@@ -64,7 +64,7 @@
     justify-content: center;
     width: 22rem;
     height: 26rem;
-    color: var(--vista-blue);
+    color: var(--savoy-blue);
     background-color: var(--white);
     border: 2px solid var(--white);
     border-radius: 1rem;
@@ -209,8 +209,11 @@
 }
 
 .message {
-  background-color: var(--white);
+  font-family: Figtree;
+  font-size: 20px;
   display: flex;
+  color: var(--savoy-blue);
+  background-color: var(--white);
   flex-direction: column;
   padding-top: -20px;
   padding: 2.5rem;
@@ -218,4 +221,26 @@
   max-height: 200px;
   overflow-y: scroll;
   margin-top: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.recommendation1 {
+  color: var(--vista-blue);
+  font-weight: 900;
+}
+
+.lessonLink1 {
+  display: inline-block;
+  color: var(--vista-blue);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+.lessonLink1:hover,
+.lessonLink1:focus,
+.lessonLink1:active {
+  color: var(--coral-pink);
 }

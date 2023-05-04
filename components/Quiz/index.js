@@ -115,26 +115,26 @@ export default function Quiz() {
                     <div>
                         {familiarityAnswer === 0 &&
                             <div>
-                                <div>Based on what you answered, we recommend learning Lesson 1 as a starting point!:</div>
-                                <Link href="/lessonOne">Lesson 1: What is Naloxone?</Link>
+                                <p className={styles.recommendation1}>Based on what you answered, we recommend learning Lesson 1 as a starting point!:</p>
+                                <Link className={styles.lessonLink1} href="/lessonOne">Lesson 1: What is Naloxone?</Link>
                             </div>
                         }
                     </div>
                     <div>
                         {familiarityAnswer === 1 &&
                             <div>
-                                <div>Based on what you answered, we recommend starting on Lesson 2 for more information:</div>
-                                <Link href="/lessonTwo">Lesson 2: Spotting an Overdose</Link>
+                                <p className={styles.recommendation1}>Based on what you answered, we recommend starting on Lesson 2 for more information:</p>
+                                <Link className={styles.lessonLink1} href="/lessonTwo">Lesson 2: Spotting an Overdose</Link>
                             </div>
                         }
                     </div>
                     <div>
                         {familiarityAnswer === 2 &&
                             <div>
-                                <div>Based on what you answered, we recommend starting on these lessons to further expand your knowledge!:</div>
-                                <Link href="/lessonThree">Lesson 3: Administering Naloxone Spray</Link>
+                                <p className={styles.recommendation1}>Based on what you answered, we recommend starting on these lessons to further expand your knowledge!:</p>
+                                <Link className={styles.lessonLink1} href="/lessonThree">Lesson 3: Administering Naloxone Spray</Link>
                                 <div>
-                                    <Link href="/lessonFour">Lesson 4: Administering Naloxone Injection</Link>
+                                    <Link className={styles.lessonLink1} href="/lessonFour">Lesson 4: Administering Naloxone Injection</Link>
                                 </div>
                             </div>
                         }
