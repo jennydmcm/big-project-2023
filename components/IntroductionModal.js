@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const IntroductionModal = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  useEffect(() => {
+    const hasShownModal = localStorage.getItem('hasShownModal');
+    const hasCompletedQuiz = localStorage.getItem('hasCompletedQuiz');
+    
+    if (!hasShownModal && hasCompletedQuiz) {
+      setShowModal(true);
+      localStorage.setItem('hasShownModal', true);
+    }
+  }, []);
 
   return (
     <>
