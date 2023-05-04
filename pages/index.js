@@ -4,16 +4,22 @@ import Head from 'next/head';
 import styles from '@/styles/QOne.module.css';
 import Quiz from '@/components/Quiz/index';
 import quizData from '@/data/questions.json';
-import IntroductionModal from '../components/IntroductionModal';
+import IntroductionModal from '../components/Introduction';
 
 export default function landingPage() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowModal(false);
-    }, 5000); // 5 seconds
+    const hasTakenQuiz = localStorage.getItem('hasTakenQuiz');
+    if (!hasTakenQuiz) {
+      setShowModal(true);
+    }
   }, []);
+
+  const handleCloseModal = () => {
+    localStorage.setItem('hasTakenQuiz', true);
+    setShowModal(false);
+  };
 
   return (
     <>
@@ -25,11 +31,10 @@ export default function landingPage() {
           @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
         </style>
       </Head>
-      <IntroductionModal show={showModal} />
+      <IntroductionModal showModal={showModal} handleCloseModal={handleCloseModal} />
       <main className={styles.main}>
         <Quiz data={quizData} />
       </main>
     </>
   );
 }
-
