@@ -31,7 +31,7 @@ export default function landingPage() {
           @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
         </style>
       </Head>
-      <IntroductionModal showModal={showModal} handleCloseModal={handleCloseModal} />
+      {showModal && <IntroductionModal handleCloseModal={handleCloseModal} />}
       <main className={styles.main}>
         <Quiz data={quizData} />
       </main>
