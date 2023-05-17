@@ -1,4 +1,4 @@
-.modal-container {
+.modalContainer {
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.close-button {
+.closeButton {
     position: absolute;
     top: 0;
     right: 0;
@@ -37,15 +37,15 @@
     cursor: pointer;
 }
 
-.modal-heading {
+.modalHeading {
     color: #ffffff;
 }
 
-.modal-text {
+.modalText {
     color: #ffffff;
 }
 
-.modal-img {
+.modalImg {
     width: 100px;
     position: absolute;
     top: -70px;
